@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import "./index.css"
 
-const myMeetings = [{ id: uuidv4(), when: new Date(), who: "akhil@gamil.com", agenda: "developer testing" }, { id: uuidv4(), when: new Date(), who: "akhil@gamil.com", agenda: "developer testing" }, { id: uuidv4(), when: new Date(), who: "akhil@gamil.com", agenda: "developer testing" }, { id: 4, when: new Date(), who: "akhil@gamil.com", agenda: "developer testing" }]
+const myMeetings = [{ id: uuidv4(), when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }, { id: uuidv4(), when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }, { id: uuidv4(), when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }, { id: 4, when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }]
 
 const Meetings = () => {
     const [meetings, setMeetings] = useState([...myMeetings])

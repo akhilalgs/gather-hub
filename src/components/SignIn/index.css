@@ -59,7 +59,7 @@ form {
     min-height: 100vh;
 }
 
-input {
+ input {
     outline: none;
     border: none;
     background-color: transparent;
@@ -70,7 +70,7 @@ input {
     font-family: "Roboto";
     color: #52606d;
     font-size: 20px;
-}
+} 
 
 .input-container {
     border: 2px solid #cbd2d9;

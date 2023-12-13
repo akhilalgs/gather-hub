@@ -58,7 +58,7 @@ const SignIn = () => {
                     <img className="gather-hub-logo" alt="gather hub" src="https://res.cloudinary.com/dss1xnwen/image/upload/v1701976068/xs7v4plcbyqrcscuexmm.jpg" />
                     <form>
 
-                        <div className="input-container">
+                        <div className="input-container password-container">
                             <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email Address" className="input-email" />
                         </div>
 

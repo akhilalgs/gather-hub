@@ -10,8 +10,9 @@ const Navbar = () => {
         <nav>
             <h1 className="gather-hub">Gather Hub</h1>
             <ul>
-                <li><Link className="link" to="/signup">Sign up</Link></li>
-                <li>Support</li>
+                <li ><Link className="link" to="/signup">Sign up</Link></li>
+                <li ><Link className="link" to="/signin">Sign in</Link></li>                
+                <li >Support</li>
 
 
             </ul>
