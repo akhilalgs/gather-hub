@@ -42,7 +42,7 @@ const AddNewMeet = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch("/api/v1/meeting/add", {
+            const response = await fetch("http://localhost:8080/add", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
