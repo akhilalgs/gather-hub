@@ -6,29 +6,34 @@ import DatePicker from "react-datepicker";
 import TimePicker from "react-time-picker";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-time-picker/dist/TimePicker.css";
+import { IoPeople } from "react-icons/io5";
+import { CgNotes } from "react-icons/cg";
 import "./index.css";
 
 const AddNewMeet = () => {
     const [addNewMeet, setAddNewMeet] = useState({
-        when: new Date(),
-        startTime: "12:00",
-        endTime: "12:30",
-        who: "",
-        agenda: ""
+        title: "",
+        description: "",
+        meeting_date: new Date(),
+        start_time: "",
+        end_time: "",
+        meeting_attendees: "",
+        
     });
 
     const handleDateChange = (date) => {
-        setAddNewMeet({ ...addNewMeet, when: date });
+        setAddNewMeet({ ...addNewMeet, meeting_date: date });
     };
 
-    const handleStartTimeChange = (startTime) => {
-        setAddNewMeet({ ...addNewMeet, startTime });
+    const handleStartTimeChange = (start_time) => {
+        setAddNewMeet({ ...addNewMeet, start_time });
     };
 
-    const handleEndTimeChange = (endTime) => {
-        setAddNewMeet({ ...addNewMeet, endTime });
+    const handleEndTimeChange = (end_time) => {
+        setAddNewMeet({ ...addNewMeet, end_time });
     };
 
+    
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setAddNewMeet({ ...addNewMeet, [name]: value });
@@ -67,38 +72,41 @@ const AddNewMeet = () => {
             <Navbar />
             <div>
                 <form onSubmit={handleSubmit}>
-                    <h1 className="Meeting-heading">Add Title</h1>
+                    <input className="Meeting-heading" placeholder="Add Title" type="text" value={addNewMeet.title}
+                            onChange={handleInputChange}/>
                     <hr className="Meeting-underline" />
-                    <div>
+                    <div className="meeting-label-container">
                         <label className="meeting-label"><FaRegCalendarAlt className="icon-size" /></label>
-                        <DatePicker className="date-picker" selected={addNewMeet.when} onChange={handleDateChange} />
+                        <DatePicker className="date-picker" selected={addNewMeet.meeting_date} onChange={handleDateChange} />
+                    </div >
+                    <div className="meeting-label-container">
+                        <IoPeople className="icon-size-1"/>
+                        <input className="date-picker meeting-label"
+                            type="text"
+                            name="add-guest"
+                            placeholder="Add Attendees / Add Guests"
+                            //value={addNewMeet.agenda}
+                            onChange={handleInputChange}/>
+                       
                     </div>
-                    <div>
-                        <label className="meeting-label"><MdAccessTimeFilled className="icon-size" /></label>
-                        <TimePicker className="date-picker" value={addNewMeet.startTime} onChange={handleStartTimeChange} />
+                    <div className="meeting-label-container">                        
+                        <label className="meeting-label meeting-side-heading">start Time:</label>
+                        <TimePicker className="date-picker" value={addNewMeet.start_time} onChange={handleStartTimeChange} />
                     </div>
-                    <div>
+                    
+                    <div className="meeting-label-container">
                         <label className="meeting-label meeting-side-heading">End Time:</label>
-                        <TimePicker className="date-picker" value={addNewMeet.endTime} onChange={handleEndTimeChange} />
+                        <TimePicker className="date-picker" value={addNewMeet.end_time} onChange={handleEndTimeChange} />
                     </div>
 
-                    <div>
-                        <label className="meeting-label meeting-side-heading">Add Guests:</label>
-                        <input className="date-picker"
-                            type="text"
-                            name="who"
-                            value={addNewMeet.who}
+                    
+                    <div className="meeting-label-container-1">                       
+                        <CgNotes className="icon-size"/>
+                        <textarea className="date-picker meeting-text-area-element"                            
+                            name="description"
+                            value={addNewMeet.description}
                             onChange={handleInputChange}
-                        />
-                    </div>
-                    <div>
-                        <label className="meeting-label meeting-side-heading">Agenda:</label>
-                        <input className="date-picker meeting-text-area-element"
-                            type="text"
-                            name="agenda"
-                            value={addNewMeet.agenda}
-                            onChange={handleInputChange}
-
+                            placeholder="Enter agenda / Description"
                         />
                     </div>
                     <div>
