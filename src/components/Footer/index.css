@@ -1,102 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+#footer {
+  background-color: #4c32a8;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 
-
-
-.Ecommerce-Website-Footer-Section-bg {
-  background-color: #e6f0ff;
-
-}
-
-.Ecommerce-Website-Footer-Section-logo {
-  width: 150px;
 }
 
-.Ecommerce-Website-Footer-Section-logo-card {
-  border-radius: 20px;
-  color: #fff;
-  margin-right:10px;
-  cursor:pointer;
-}
-.footer-section-company-logo{
-      display:flex;
-      justify-content: left;
-}
-@media (max-width:500px){
-  .footer-section-company-logo{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-  }
-}
-
-
-.Ecommerce-Website-Footer-Section-address {
-  color: #fff;
-  font-size: 15px;
-  font-family: "Roboto";
-  margin-left:0px;
-}
-
-.Ecommerce-Website-Footer-Section-heading {
-  color: #003380;
-  font-size: 18px;
-  font-family: "Roboto";
-  font-weight: 600;
-}
-
-
-.Ecommerce-Website-Footer-Section-line {
-  width: 100;
-  border-width: 2px;
-  border-color: #003380;
-}
-
-.Ecommerce-Website-Footer-Section-copy-right {
-  color: #003380;
-}
-.Footer-courses-list{
-  display:flex;
-  flex-direction: column;
-  line-height:16px;
-}
-.Footer-courses-list-2{
-  display:flex;
-  flex-direction: column;
-  line-height:16px;
-}
-.Footer-Each-course{
-  cursor:pointer;
-  text-decoration: none;
-  margin-bottom:8px;
-}
-.Footer-Each-course:hover{
-  font-weight:bold;
-  color:#222;
-}
-.social-media-logos{
-  width:24px;
-  height:24px;
-  object-fit: cover;
-}
-.Ecommerce-Website-Footer-Section-address{
-  color: #003380;
-}
-.footer-section-row-container{
-  display:flex;
+.footer-row {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap:wrap;
 }
-@media (max-width:512px){
-  .Footer-courses-list{
-    line-height:16px;
-  }
 
-  .Footer-courses-list-2{
-    line-height:15px;
-  }
+#part1 h1 {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #ffffff;
 }
-.privacy-text{
-  text-decoration: none;
-  font-size: 12px;
-  cursor: pointer;
+
+
+#part1 p {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #ffffff;
+  max-width: 350px;
+}
+
+.footer-links {
+  display: flex;
+}
+
+#part2 h1 {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #ffffff;
+}
+
+#part3 h1 {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #ffffff;
+}
+
+#part3 h3 {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #ffffff;
+}
+
+#part2 h3 {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.icon-footer {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+}
+
+.line2 {
+  border: 1px solid #ffffff;
+}
+
+.icons-container-footer {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.footer-icons {
+  font-size: 30px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.last-icon {
+  align-self: flex-end;
+}
+
+.icons-inner-container {
+  display: flex;
+  align-items: center;
 }
