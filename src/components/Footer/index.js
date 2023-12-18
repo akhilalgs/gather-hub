@@ -23,9 +23,9 @@ const Footer = () => {
       <div className="footer-row">
         <div id="part1">
           <h1>Gather Hub</h1>
-          <p>"Unlock the power of seamless connection with Gather Hub! Elevate Your communication experience through
+          <p>Unlock the power of seamless connection with Gather Hub! Elevate Your communication experience through
             video,audio,phone and chat-bringing people closer, no matter the distance.Embrace a world where inspiration
-            knows no bounds, as Gather Hub transforms your conversations into moments that matter.Join us and make every connection a masterpiece!"
+            knows no bounds, as Gather Hub transforms your conversations into moments that matter.Join us and make every connection a masterpiece.
           </p>
         </div>
 
