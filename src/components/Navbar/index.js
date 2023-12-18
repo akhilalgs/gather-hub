@@ -23,7 +23,7 @@ const Navbar = () => {
                 <Link className="link" to="/contact-us">
                     <li>Contact us</li>
                 </Link>
-                <li>Pricing</li>
+                <Link className="link" to='/pricing'><li>Pricing</li></Link>
                 <li>Support</li>
             </ul>
             <div id="login-logout-buttons">

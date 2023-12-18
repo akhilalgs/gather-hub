@@ -139,7 +139,7 @@
     box-shadow: 0px 4px 16px 0px #bfbfbf;
     border-radius: 8px;
     margin-bottom: 20px;
-    background-color: #4c32a8;
+    background-color: #1f0051;
     height: 50px;
     width: 100%;
     color: #ffffff;
@@ -148,23 +148,7 @@
     font-family: "Roboto";
     padding: 5px;
 }
-  .singup-button {
-    padding: 20px;
-    margin: auto;
-    width: 380px;
-    color: #FFF;
-    font-family: "Roboto";
-    font-size: 25px;
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    height: 66px;
-    flex-shrink: 0;
-    border-radius: 13px;
-    background: #290051;
-    margin-left: 30px;
-  }
+  
   .signin-paragraph{
     margin-left: 90px;
   }

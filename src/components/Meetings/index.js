@@ -7,7 +7,8 @@ import './index.css';
 
 const Meetings = () => {
     const [meetings, setMeetings] = useState([]);
-    const navigate = useNavigate();
+    const navigate = useNavigate();  
+
 
     useEffect(() => {
         const fetchData = async () => {
