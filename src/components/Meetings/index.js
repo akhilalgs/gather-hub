@@ -1,72 +1,49 @@
-
-import Navbar from "../Navbar"
-import NewMeet from "../NewMeet"
-import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import { v4 as uuidv4 } from 'uuid';
-
-import "./index.css"
-
-const myMeetings = [{ id: uuidv4(), when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }, { id: uuidv4(), when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }, { id: uuidv4(), when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }, { id: 4, when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }]
+import React, { useState, useEffect } from 'react';
+import Navbar from '../Navbar';
+import NewMeet from '../NewMeet';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import './index.css';
 
 const Meetings = () => {
-    const [meetings, setMeetings] = useState([...myMeetings])
+    const [meetings, setMeetings] = useState([]);
     const navigate = useNavigate();
 
-    // useEffect with an empty dependency array, similar to componentDidMount
     useEffect(() => {
-        // This code will run once when the component mounts
-        // You can fetch data, perform initial setup, etc.
-
-        // For example, if you have an asynchronous operation (e.g., fetching data), you can do something like this:
         const fetchData = async () => {
             try {
-                // Perform your asynchronous operation here
-                // For example, fetching data from an API
-                const response = await fetch("/user-meetings-comes-here");
-                const data = await response.json();
-
-                // Update state with the fetched data
-
+                const response = await axios.get('http://localhost:8080/meetings');
+                setMeetings(response.data);
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error('Error fetching meetings:', error);
             }
         };
 
-        // Call the fetchData function
         fetchData();
-
-        // Cleanup function (optional)
-        return () => {
-            // This function will run when the component unmounts
-            // You can perform cleanup tasks here if necessary
-        };
-    }, []); // Empty dependency array means this effect will run once when the component mounts
+    }, []);
 
     const newMeetButton = () => {
-        navigate("/new-metting")
-    }
+        navigate('/new-metting');
+    };
 
     return (
         <>
             <Navbar />
             <div className="meetings-main-container">
                 <div className="new-button-container">
-                    <button onClick={newMeetButton} className="new-metting-button" type="button">New Metting</button>
+                    <button onClick={newMeetButton} className="new-metting-button" type="button">
+                        New Meeting
+                    </button>
                 </div>
 
-                <ul className="mettings-cards-container">
-                    {meetings.map((eachItem) => (
-                        <NewMeet key={eachItem.id} newItem={eachItem} />
+                <ul className="meetings-cards-container">
+                    {meetings.map((meeting) => (
+                        <NewMeet key={meeting.id} newItem={meeting} />
                     ))}
                 </ul>
-
             </div>
         </>
-    )
+    );
+};
 
-
-}
-
-
-export default Meetings
+export default Meetings;
