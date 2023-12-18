@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom"
 
+import { TbCircleLetterG } from "react-icons/tb";
+import { BsArrowRight } from "react-icons/bs";
+
 import "./index.css"
 
 const Navbar = () => {
@@ -8,14 +11,26 @@ const Navbar = () => {
 
     return (
         <nav>
-            <h1 className="gather-hub">Gather Hub</h1>
-            <ul>
-                <li ><Link className="link" to="/signup">Sign up</Link></li>
-                <li ><Link className="link" to="/signin">Sign in</Link></li>                
-                <li >Support</li>
+            <Link to="/" className="link">
+                <div id="gather-hub-logo-container">
+                    <TbCircleLetterG className="nav-logo" />
+                    <h1 className="gather-hub">Gather Hub</h1>
+                </div>
+            </Link>
 
 
+            <ul id="navbar-options-container">
+                <Link className="link" to="/contact-us">
+                    <li>Contact us</li>
+                </Link>
+                <li>Pricing</li>
+                <li>Support</li>
             </ul>
+            <div id="login-logout-buttons">
+                <button type="button">Log In</button>
+                <button id="signup-button" type="button">Sign Up <BsArrowRight /></button>
+
+            </div>
         </nav>
     )
 

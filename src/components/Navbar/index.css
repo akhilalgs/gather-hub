@@ -3,32 +3,72 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-li {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-weight: 500;
-    font-family: "Roboto";
-    list-style: none;
-    color: #ffffff;
-    font-size: 20px;
-}
-
-ul {
-    display: flex;
+    padding-left: 20px;
     padding-right: 20px;
+
 }
 
-.gather-hub {
-    font-weight: 500;
+#gather-hub-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#gather-hub-logo-container h1 {
+    font-family: "Bree Serif";
+    font-size: 25px;
     color: #ffffff;
-    padding-left: 20px;      
+}
+
+
+
+.nav-logo {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    margin-right: 4px;
+}
+
+#navbar-options-container {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+#navbar-options-container li {
+    color: #f7f8fa;
+    font-family: "Bree Serif";
+    font-size: 20px;
+    list-style-type: none;
+    padding: 15px;
+    font-weight: 400;
+}
+
+
+
+#navbar-options-container li:hover {
+    border-bottom: 1px solid #ffffff;
+}
+
+
+#login-logout-buttons button {
+    height: 40px;
+    max-width: 150px;
+    min-width: 100px;
+    border: 1px solid #f7f8fa;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Bree Serif";
+    background-color: transparent;
+    color: #f7f8fa;
+
+}
+
+#login-logout-buttons #signup-button {
+    background-color: #f7f8fa;
+    color: #4c32a8;
 }
 
 .link {
     text-decoration: none;
-    color: #ffffff;
-   
-
 }
