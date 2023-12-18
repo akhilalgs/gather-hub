@@ -91,7 +91,7 @@ const SignIn = () => {
 
                         <button className="sign-in-button" onClick={handleSubmit} type="submit">Sign In</button>
                     </form>
-                    <div className="line-container">
+                    {/* <div className="line-container">
                         <hr className="line" />
                         <p className="sign-in-text">Or sign in with</p>
                         <hr className="line" />
@@ -105,7 +105,7 @@ const SignIn = () => {
                             <img className="sign-in-image" alt="facebook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" />
                         </a>
 
-                    </div>
+                    </div> */}
                 </div>
 
             </div>

@@ -27,8 +27,8 @@ const Navbar = () => {
                 <li>Support</li>
             </ul>
             <div id="login-logout-buttons">
-                <button type="button">Log In</button>
-                <button id="signup-button" type="button">Sign Up <BsArrowRight /></button>
+                <Link to="/signin"><button type="button">Log In</button></Link>
+                <Link to="/signup"><button id="signup-button" type="button">Sign Up <BsArrowRight /></button></Link>
 
             </div>
         </nav>
