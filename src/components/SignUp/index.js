@@ -169,8 +169,8 @@ const SignUp = () => {
                 <a className="terms-style">Privacy Policy</a>
               </p>
             </div>
-            <div >
-              <button  className="sign-in-button" type="submit" onClick={signUpUser}>
+            <div className="button">
+              <button  className="sign-up-button" type="submit" onClick={signUpUser}>
                 Sign Up
               </button>
             </div>
