@@ -5,6 +5,7 @@ import Meetings from "./components/Meetings";
 import AddNewMeet from './components/AddNewMeet';
 import './App.css';
 import Home from './components/Home';
+import CalendarView from  './components/Calaender/CalendarView'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
        <Route path='/meetings' Component={Meetings} />
        <Route path="/new-metting" Component={AddNewMeet} />
        <Route path="/signin" Component={SignIn}/>
+       <Route path="/CalendarView" Component={CalendarView}/>
      </Routes>
 
   );

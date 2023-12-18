@@ -40,7 +40,7 @@ const AddNewMeet = () => {
               meeting_attendees:meetingAttendees
             });
             alert("Metting added successfully");
-            navigate("/meetings");
+            navigate("/CalendarView");
           } catch (error) {
             console.error(error);
           }
