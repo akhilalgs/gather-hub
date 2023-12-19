@@ -37,7 +37,8 @@ const AddNewMeet = () => {
               meeting_date:meeting_date,
               start_time:start_time,
               end_time:end_time,
-              meeting_attendees:meetingAttendees
+              meeting_attendees:meetingAttendees,
+              room_id:"room".Math.random()
             });
             alert("Metting added successfully");
             navigate("/CalendarView");

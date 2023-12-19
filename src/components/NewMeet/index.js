@@ -1,17 +1,18 @@
 
+ 
 import React from "react";
-
+ 
 import { CgBorderStyleDotted } from "react-icons/cg";
-
+ 
 import "./index.css"
-
-
-
+ 
+ 
+ 
 // Assuming NewMeet.js
-
-
-
-
+ 
+ 
+ 
+ 
 const NewMeet = ({ newItem }) => {
     return (
         <li className="new-meet-item">
@@ -35,8 +36,10 @@ const NewMeet = ({ newItem }) => {
                     <p className="event-details-para">Agenda: <span className="event-details-span">{newItem.agenda}</span></p>
                 </div>
             </div>
+            {/* {  navItem.room_id } */}
         </li >
     );
 };
-
+ 
 export default NewMeet;
+ 

@@ -32,6 +32,33 @@
     padding-left: 0px;
 
 }
+.event-details-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 10px;
+
+}
+.event-name-heading {
+    color: #000;
+    font-family: "Roboto";
+    font-size: 22px;
+    font-family: 500;
+
+}
+.event-details-span {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: #000;
+}
+
+.event-details-para {
+    font-family: "Roboto";
+    font-size: 20px;
+    color: #807e7e;
+    font-weight: 500;
+}
 
 
 

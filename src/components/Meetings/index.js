@@ -37,15 +37,25 @@ const Meetings = () => {
         <Navbar />
             <div className="meetings-main-container">
                 <div className="new-button-container">
-                    <button onClick={newMeetButton} className="new-metting-button" type="button">New Metting</button>
+                    <button onClick={newMeetButton} className="new-metting-button" type="button">New Meeting</button>
+                </div>
+                <div>
+                
+            <div className="event-details-container">
+                <div>
+                    <h1 className="event-name-heading">title</h1>
+                    <p className="event-details-para">Date: <span className="event-details-span"></span></p>
+                    <p className="event-details-para">Who: <span className="event-details-span" id="who"></span></p>
+                    <p className="event-details-para">Agenda: <span className="event-details-span"></span></p>
+                </div>
+                <div className="">
+                    <a href="zegocloud.?roomId="></a>
+                </div>
+            </div>
+       
                 </div>
  
-                <ul className="mettings-cards-container">
-                    {meetings.map((eachItem) => (
-                        <NewMeet key={eachItem.id} newItem={eachItem} />
-                    ))}
-                </ul>
- 
+               
             </div>
         </>
     )
