@@ -121,6 +121,12 @@ form {
     text-decoration: none;
     font-weight: 500;
 }
+.button {
+    margin-top: px;
+    width: 100%;
+    text-align: center;
+    padding-left: 35px;
+  }
 
 .sign-in-button {
     border: 2px solid #cbd2d9;
