@@ -20,7 +20,9 @@ function App() {
       <Route path="/signin" Component={SignIn} />
       <Route path='/contact-us' Component={ContactUs} />
       <Route path='/pricing' Component={Price}/>
-       {/* <Route path="/CalendarView" Component={CalendarView}/> */}
+      <Route path='/Home' Component={Home}/>
+      
+    
     </Routes>
 
   );
