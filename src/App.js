@@ -21,6 +21,7 @@ function App() {
       <Route path='/contact-us' Component={ContactUs} />
       <Route path='/pricing' Component={Price}/>
       <Route path='/Home' Component={Home}/>
+      
     
     </Routes>
 
