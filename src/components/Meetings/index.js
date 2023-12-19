@@ -1,23 +1,28 @@
 
- 
 import Navbar from "../Navbar"
 import NewMeet from "../NewMeet"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { v4 as uuidv4 } from 'uuid';
 import axios from "axios";
- 
+import Cookies from 'js-cookie'; 
 import "./index.css"
  
-const myMeetings = [{ id: uuidv4(), when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }, { id: uuidv4(), when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }, { id: uuidv4(), when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }, { id: 4, when: new Date(), who: "akhila@gamil.com", agenda: "developer testing" }]
+const myMeetings = [{ id: uuidv4(),  who: "akhila@gamil.com", agenda: "developer testing" }, { id: uuidv4(),  who: "akhila@gamil.com", agenda: "developer testing" }, { id: uuidv4(),  who: "akhila@gamil.com", agenda: "developer testing" }, { id: 4,  who: "akhila@gamil.com", agenda: "developer testing" }]
  
 const Meetings = () => {
-    const [meetings, setMeetings] = useState([...myMeetings])
+    const [meetings, setMeetings] = useState([])
     const navigate = useNavigate();
+    const token = Cookies.get('token');
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/meetings');
+                const response = await axios.get('http://localhost:8081/meetings',{
+                    headers: {
+                        'Authorization':token 
+                    }
+                });
+                console.log(response,"error")
                 setMeetings(response.data);
             } catch (error) {
                 console.error('Error fetching meetings:', error);
@@ -25,8 +30,8 @@ const Meetings = () => {
         };
  
         fetchData();
-    }, []);
- 
+    } );
+  console.log(meetings)
     const newMeetButton = () => {
         navigate("/new-metting")
     }
@@ -45,6 +50,7 @@ const Meetings = () => {
                         <NewMeet key={eachItem.id} newItem={eachItem} />
                     ))}
                 </ul>
+                
  
             </div>
         </>
