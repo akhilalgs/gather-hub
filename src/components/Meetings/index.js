@@ -32,7 +32,7 @@ const Meetings = () => {
 
     return (
         <>
-            <Navbar />
+            {/* <Navbar />
             <div className="meetings-main-container">
                 <div className="new-button-container">
                     <button onClick={newMeetButton} className="new-metting-button" type="button">New Metting</button>
@@ -48,6 +48,19 @@ const Meetings = () => {
                       
                           
                         </div>
+                    ))}
+                </ul>
+
+            </div> */}
+            <Navbar />
+            <div className="meetings-main-container">
+                <div className="new-button-container">
+                    <button onClick={newMeetButton} className="new-metting-button" type="button">New Metting</button>
+                </div>
+
+                <ul className="mettings-cards-container">
+                    {meetings.map((eachItem) => (
+                        <NewMeet key={eachItem.id} newItem={eachItem} />
                     ))}
                 </ul>
 
