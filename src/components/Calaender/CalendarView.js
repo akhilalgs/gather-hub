@@ -9,7 +9,7 @@ const CalendarView = () => {
 
   useEffect(() => {
     // Fetch meetings from backend
-    axios.get('http://localhost:8080/meetings')
+    axios.get('http://localhost:8081/meetings')
       .then(response => {
         setMeetings(response.data);
       })
