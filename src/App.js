@@ -7,6 +7,7 @@ import ContactUs from "./components/ContactUs"
 import './App.css';
 import Home from './components/Home';
 import Price from './components/Pricing';
+import Room from './components/Zegocloud-api/Room';
 // import CalendarView from  './components/Calaender/CalendarView'
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       <Route path='/contact-us' Component={ContactUs} />
       <Route path='/pricing' Component={Price}/>
       <Route path='/Home' Component={Home}/>
-      
+      <Route path='/Room' Component={Room}/>
+
     
     </Routes>
 
