@@ -31,15 +31,18 @@ const Meetings = () => {
     }
 
     return (
-        <>
+        <div>
+            
+        </div>
+       // <>
             // <Navbar />
             // <div className="meetings-main-container">
             //     <div className="new-button-container">
             //         <button onClick={newMeetButton} className="new-metting-button" type="button">New Metting</button>
             //     </div>
 
-            //     <ul className="mettings-cards-container">
-            //         {meetings.map((meeting) => (
+            //   </div>  <ul className="mettings-cards-container">
+            //         ////</ul>{meetings.map((meeting) => (
             //               <div key={meeting.id} className="meeting-card">
             //                 <h3> Tittle :{meeting.title}</h3>
             //                 <p> Date :{meeting.meeting_date}</p>
@@ -52,20 +55,20 @@ const Meetings = () => {
             //     </ul>
 
             // </div>
-        <Navbar />
-            <div className="meetings-main-container">
-                <div className="new-button-container">
-                    <button onClick={newMeetButton} className="new-metting-button" type="button">New Metting</button>
-                </div>
+        // <Navbar />
+        //     <div className="meetings-main-container">
+        //         <div className="new-button-container">
+        //             <button onClick={newMeetButton} className="new-metting-button" type="button">New Metting</button>
+        //         </div>
 
-                <ul className="mettings-cards-container">
-                    {meetings.map((eachItem) => (
-                        <NewMeet key={eachItem.id} newItem={eachItem} />
-                    ))}
-                </ul>
+        //         <ul className="mettings-cards-container">
+        //             {meetings.map((eachItem) => (
+        //                 <NewMeet key={eachItem.id} newItem={eachItem} />
+        //             ))}
+        //         </ul>
 
-            </div>
-        </>
+        //     </div>
+        //</>
     )
 
 
